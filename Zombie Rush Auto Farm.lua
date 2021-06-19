@@ -6,7 +6,7 @@ StandOn.Size = Vector3.new(100, 1, 100)
 StandOn.CFrame = CFrame.new(39.6000061, 160.2000008, 56.2001953)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(39.6000061, 165.2000008, 56.2001953)
 local ZS = game:GetService("Workspace")["Zombie Storage"]
-ZS.ChildAdded:Connect(function(zombie) -- Connects function on child added NO PAIRS LOOP
+ZS.ChildAdded:Connect(function(zombie)
 	if getgenv().On then
 		repeat
 			wait()
@@ -25,7 +25,7 @@ ZS.ChildAdded:Connect(function(zombie) -- Connects function on child added NO PA
 		until zombie.Humanoid.Health == 0 or zombie == nil -- Repeats until zombies dead
 	end
 end)
-game:GetService("ReplicatedStorage").GameProperties.CurrentWave.Changed:Connect(function(Bla) -- Connects function on text changed NO WHILE LOOP WTF
+game:GetService("ReplicatedStorage").GameProperties.CurrentWave.Changed:Connect(function()
 	if game:GetService("ReplicatedStorage").GameProperties.CurrentWave.Value >= 900 then 
 		game.Players.LocalPlayer.Character.Humanoid.Health = 0 -- you die :()
 	end
