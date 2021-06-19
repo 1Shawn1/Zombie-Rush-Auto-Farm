@@ -10,7 +10,7 @@ ZS.ChildAdded:Connect(function(zombie)
 	if getgenv().On then
 		repeat
 			wait()
-			local ohTable1 = {
+			local KillThem = {
 				["Tool"] = game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass("Tool"),
 				["RealTool"] = game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass("Tool"),
 				["HumanoidTables"] = {
@@ -21,7 +21,7 @@ ZS.ChildAdded:Connect(function(zombie)
 					}
 				}
 			}
-			game:GetService("ReplicatedStorage").Remotes.WeaponEvent:FireServer(ohTable1)
+			game:GetService("ReplicatedStorage").Remotes.WeaponEvent:FireServer(KillThem)
 		until zombie.Humanoid.Health == 0 or zombie == nil
 	end
 end)
