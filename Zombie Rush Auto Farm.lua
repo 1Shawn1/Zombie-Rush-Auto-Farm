@@ -27,7 +27,7 @@ ZS.ChildAdded:Connect(function(zombie)
 end)
 game:GetService("ReplicatedStorage").GameProperties.CurrentWave.Changed:Connect(function()
 	if game:GetService("ReplicatedStorage").GameProperties.CurrentWave.Value >= 900 then 
-		game.Players.LocalPlayer.Character.Humanoid.Health = 0 -- you die :()
+		game.Players.LocalPlayer.Character.Humanoid.Health = 0 -- you die :(
 	end
 end)
 game.StarterGui:SetCore("SendNotification", {
