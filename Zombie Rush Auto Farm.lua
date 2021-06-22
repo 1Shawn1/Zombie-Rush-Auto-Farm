@@ -9,7 +9,7 @@ local ZS = game:GetService("Workspace")["Zombie Storage"]
 ZS.ChildAdded:Connect(function(zombie)
 	if getgenv().On then
 		repeat
-			wait()
+			wait(0.1)
 			local KillThem = {
 				["Tool"] = game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass("Tool"),
 				["RealTool"] = game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass("Tool"),
